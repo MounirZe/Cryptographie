@@ -9,6 +9,8 @@ public:
     GInt& Addition(GInt &add,GInt &final);
     GInt Multiplication(GInt &add);
     GInt& Egal(GInt &add);
+    GInt& SoustraitUn(GInt &final);
+
 
 
     // Juste pour les test :
@@ -22,4 +24,6 @@ public:
     uint32_t* getp_int(){
         return p_uint;
     }
+
+    GInt &Soustrait(GInt &add, GInt &final);
 };
