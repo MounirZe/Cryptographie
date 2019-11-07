@@ -6,7 +6,13 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/Sukiu/Desktop/TIPE Crypto/untitled2/GInt.h
+stdint-gcc.h
+-
+
 C:/Users/Sukiu/Desktop/TIPE Crypto/untitled2/main.cpp
 iostream
 -
+GInt.h
+C:/Users/Sukiu/Desktop/TIPE Crypto/untitled2/GInt.h
 

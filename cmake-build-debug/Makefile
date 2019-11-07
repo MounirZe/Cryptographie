@@ -122,6 +122,33 @@ untitled2/fast:
 	$(MAKE) -f CMakeFiles\untitled2.dir\build.make CMakeFiles/untitled2.dir/build
 .PHONY : untitled2/fast
 
+GInt.obj: GInt.cpp.obj
+
+.PHONY : GInt.obj
+
+# target to build an object file
+GInt.cpp.obj:
+	$(MAKE) -f CMakeFiles\untitled2.dir\build.make CMakeFiles/untitled2.dir/GInt.cpp.obj
+.PHONY : GInt.cpp.obj
+
+GInt.i: GInt.cpp.i
+
+.PHONY : GInt.i
+
+# target to preprocess a source file
+GInt.cpp.i:
+	$(MAKE) -f CMakeFiles\untitled2.dir\build.make CMakeFiles/untitled2.dir/GInt.cpp.i
+.PHONY : GInt.cpp.i
+
+GInt.s: GInt.cpp.s
+
+.PHONY : GInt.s
+
+# target to generate assembly for a file
+GInt.cpp.s:
+	$(MAKE) -f CMakeFiles\untitled2.dir\build.make CMakeFiles/untitled2.dir/GInt.cpp.s
+.PHONY : GInt.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -158,6 +185,9 @@ help:
 	@echo ... untitled2
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... GInt.obj
+	@echo ... GInt.i
+	@echo ... GInt.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

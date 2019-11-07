@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Sukiu/Desktop/TIPE Crypto/untitled2/GInt.cpp">
+			<Option target="untitled2"/>
+		</Unit>
+		<Unit filename="C:/Users/Sukiu/Desktop/TIPE Crypto/untitled2/GInt.h">
+			<Option target="untitled2"/>
+		</Unit>
 		<Unit filename="C:/Users/Sukiu/Desktop/TIPE Crypto/untitled2/main.cpp">
 			<Option target="untitled2"/>
 		</Unit>
