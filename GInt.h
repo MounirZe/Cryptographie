@@ -6,10 +6,26 @@ private:
     uint32_t * p_uint;
     uint32_t taille;
 public:
-    GInt& Addition(GInt &add,GInt &final);
+    GInt(const uint32_t tailletab){
+        taille = tailletab;
+        p_uint = new uint32_t[taille];
+        for(uint32_t i =0;i<taille;i++){
+            p_uint[i] = 0;
+        }
+    }
+    GInt(){
+        taille = 0;
+        p_uint = nullptr;
+    }
+    GInt(const GInt &copie);
+
+    GInt & operator=(const GInt &copie);
+
+    GInt Addition(const GInt &add);
     GInt Multiplication(GInt &add);
-    GInt& Egal(GInt &add);
-    GInt& SoustraitUn(GInt &final);
+    GInt SoustraitUn();
+
+    GInt Soustrait(const GInt &add);
 
 
 
@@ -24,6 +40,14 @@ public:
     uint32_t* getp_int(){
         return p_uint;
     }
+    uint32_t gettaille(){
+        return taille;
+    }
 
-    GInt &Soustrait(GInt &add, GInt &final);
+
+    ~GInt(){
+        delete [] p_uint;
+    }
+
+    GInt &Egal(GInt copie);
 };
