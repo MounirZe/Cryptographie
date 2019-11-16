@@ -4,6 +4,67 @@
 #include <iostream>
 
 
+GInt::GInt(std::string nombre){
+    std::reverse(nombre.begin(),nombre.end());
+
+    std::string b;
+    int i = 0;
+    GInt base(1);
+    GInt base2(1);
+
+    base.p_uint[0] = 1000000000;//10^9
+
+
+    base2.p_uint[0] =  1;
+
+    taille = floor(nombre.length()*log(10)/(32*log(2)) )+ 1;
+    p_uint = new unsigned int[taille];
+    p_uint[0] = 0;
+
+    GInt ret(taille);
+
+    while((i+1)*9<nombre.length()){
+        GInt a(1);
+        //for(int j = 0;j<9;j++){
+        //    a.p_uint[0] += nombre[i*9 +j]*pow(10,9-j);
+        //}
+
+        b = nombre.substr(i*9,(i+1)*9);
+        std::reverse(b.begin(),b.end());
+
+
+        a.p_uint[0] = std::stoi(b);
+
+
+        a = a.Multiplication(base2);
+        ret = ret.Addition(a);
+
+
+        base2 = base2.Multiplication(base);
+
+        i++;
+    };
+    GInt c(1);
+    //std::cout<<std::stoi(nombre.substr(i*9));
+
+    //std::cout<<nombre.substr(i*9);
+
+
+    b = nombre.substr(i*9);
+
+    std::reverse(b.begin(),b.end());
+
+    c.p_uint[0] = std::stoi(b);
+    c = c.Multiplication(base2);
+
+
+    ret = ret.Addition(c);
+
+    for(unsigned int i=0;i<taille;i++){
+        p_uint[i] = ret.p_uint[i];
+    }
+}
+
 
 GInt::GInt(const GInt &copie){
     if(copie.p_uint[copie.taille-1]==0){
